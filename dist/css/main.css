@@ -1,0 +1,220 @@
+/*! DropMyMessage v0.0.1 | (c) 2020 Gajendra Mehra | MIT License | http://link-to-your-git-repo.com */
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+/* line 5, src/sass/main.scss */
+body {
+  background-color: #212121;
+  font-family: 'Sacramento', cursive;
+}
+
+/* line 9, src/sass/main.scss */
+.container {
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 18, src/sass/main.scss */
+.container .title {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-shadow: 0px 2px 1px orange, 0px 0px 6px orangered, 0px 5px 10px black;
+}
+
+/* line 26, src/sass/main.scss */
+.fireworks {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 29, src/sass/main.scss */
+.fireworks li {
+  display: inline-block;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 500px;
+  position: relative;
+  background-color: #8D6E63;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 38, src/sass/main.scss */
+.fireworks li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #212121;
+  width: 100%;
+  border-radius: 500px;
+  top: -40%;
+  left: -30%;
+}
+
+/* line 48, src/sass/main.scss */
+.fireworks li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #212121;
+  width: 100%;
+  border-radius: 500px;
+  top: -40%;
+  right: -30%;
+}
+
+/* line 58, src/sass/main.scss */
+.fireworks li span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: fire 0.3s ease infinite;
+          animation: fire 0.3s ease infinite;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(1) span {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(2) span {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(3) span {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(4) span {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(5) span {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+/* line 76, src/sass/main.scss */
+.fireworks li:nth-child(6) span {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes fire {
+  0%, 100% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+    width: 20px;
+    background: -webkit-gradient(linear, left top, right top, from(orange), to(orangered));
+    background: linear-gradient(90deg, orange, orangered);
+  }
+  50% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 18px;
+    background: -webkit-gradient(linear, left top, right top, from(orangered), to(orange));
+    background: linear-gradient(90deg, orangered, orange);
+  }
+}
+
+@keyframes fire {
+  0%, 100% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+    width: 20px;
+    background: -webkit-gradient(linear, left top, right top, from(orange), to(orangered));
+    background: linear-gradient(90deg, orange, orangered);
+  }
+  50% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 18px;
+    background: -webkit-gradient(linear, left top, right top, from(orangered), to(orange));
+    background: linear-gradient(90deg, orangered, orange);
+  }
+}
+
+/*link*/
+/* line 98, src/sass/main.scss */
+.info {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  width: 200px;
+  font-size: 2rem;
+}
+
+/* line 108, src/sass/main.scss */
+.info a {
+  font-size: 3rem;
+  display: block;
+  color: #fff;
+}
+
+/* basic styles for black background and crosshair cursor */
+/* line 117, src/sass/main.scss */
+body {
+  margin: 0;
+}
+
+/* line 122, src/sass/main.scss */
+canvas {
+  display: block;
+}
+
+/* line 124, src/sass/main.scss */
+.wish {
+  right: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* line 135, src/sass/main.scss */
+.hight-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+  float: left;
+  width: 100%;
+  line-height: 35px;
+}
+
+/* line 142, src/sass/main.scss */
+.from {
+  font-family: 'Sacramento', cursive;
+  color: #ffd280;
+  font-size: 22px;
+}
