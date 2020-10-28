@@ -1,3 +1,4 @@
+/*! DropMyMessage v0.0.1 | (c) 2020 Gajendra Mehra | MIT License | http://link-to-your-git-repo.com */
 
   var url=window.location.href;
   var t=url.search("r=");
